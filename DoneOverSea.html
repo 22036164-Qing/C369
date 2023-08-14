@@ -1,7 +1,7 @@
 <html>
 
 <head>
-        <!--I declare that this code was written by me. 
+    <!--I declare that this code was written by me. 
 
             I will not copy or allow others to copy my code. 
 
@@ -119,48 +119,52 @@
                         please select currency type
                     </p>
                     <div class="container">
+    
 
-                        <div class="row">
-                            <div class="col">
+                            <div class="row">
+                                <div class="col">
 
-                                <p><label for="type">Currency type:</label></p>
-                                <select id="pType" required>
+                                    <p><label for="type">Currency type:</label></p>
+                                    <select id="pType" required>
 
 
-                                    <option value="USD">USD</option>
-                                    <option value="Euro">Euro</option>
-                                    <option value="Pound">Pound</option>
+                                        <option value="USD">USD</option>
+                                        <option value="Euro">Euro</option>
+                                        <option value="Pound">Pound</option>
 
-                                </select>
+                                    </select>
 
-                                <p>Amount to exchange:</p>
-                                <input type="number" id="amount" placeholder="Enter amount." />
+                                    <p>Amount to exchange:</p>
+                                    <input type="number" id="amount" placeholder="Enter amount." required/>
+
+                                </div>
+
+                                <div class="col">
+
+
+                                    <p><label for="type">Choose exchanged currency type:</label></p>
+
+                                    <select id="type" required>
+                                        <option value="USD">USD</option>
+                                        <option value="Euro">Euro</option>
+                                        <option value="Pound">Pound</option>
+                                        <option value="SGD">SGD</option>
+                                    </select>
+
+
+                                    <p>Amount you will recieve:</p>
+                                    <input type="text" id="output" disabled />
+                                    <br><br><button onclick="getOSExchange() + enable()" >Click here to Calculate</button><br>
+                                    
+                                    <a href="payment.html"><button id="payment" style="margin-left: 95px;" disabled>Payment</button></a>
+
+
+                                    <script src="math2.js"></script>
+                                    <br><br>
+                                </div>
 
                             </div>
-
-                            <div class="col">
-
-                                <p><label for="type">Choose exchanged currency type:</label></p>
-
-                                <select id="type" required>
-                                    <option value="USD">USD</option>
-                                    <option value="Euro">Euro</option>
-                                    <option value="Pound">Pound</option>
-                                    <option value="SGD">SGD</option>
-                                </select>
-
-
-                                <p>Amount you will recieve:</p>
-                                <input type="text" id="output" disabled />
-                                <br><br><button onclick="getOSExchange()">Click here to Calculate</button><br>
-                                <a href="payment.html"><button style="margin-left: 95px;">Payment</button></a>
-
-
-                                <script src="math2.js"></script>
-                                <br><br>
-                            </div>
-
-                        </div>
+                        
                     </div>
                 </div>
             </div>

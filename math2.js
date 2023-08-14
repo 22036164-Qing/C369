@@ -122,6 +122,6 @@ function getRate(pType, type) {
     return exchangeRate;
 }
 
-function display(){
-    alert(amount);
+function enable(){
+    document.getElementById("payment").removeAttribute("disabled");
 }
