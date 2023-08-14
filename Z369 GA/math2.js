@@ -1,4 +1,18 @@
+// //--I declare that this code was written by me. 
 
+// I will not copy or allow others to copy my code. 
+
+// I understand that copying code is considered as plagiarism.
+
+
+
+// Student Name: Wei QingZhen
+
+// Student ID: 22036164
+
+// Class: C369-3D-E63C-A
+
+// Date/Time Last modified:14/8/2023 2.54pm-->
 
 function getExchange() {
     const amount = document.getElementById("amount").value;
