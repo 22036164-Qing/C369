@@ -54,8 +54,8 @@
         body {
             background-image: url("Screenshot 2023-08-05 185705.png");
             background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
+            background-size: auto;
+            background-position: top;
         }
 
 
@@ -83,8 +83,11 @@
         </div>
         <h1 class="brand">GoChange</h1>
         <div class="nev-links">
-            <a href="DoneSignUp.html"> <button class="signup-button">Sign Up</button></a>
-            <a href="DoneLogin.html"> <button class="login-button">Login</button></a>
+
+            <img src="istockphoto-1337144146-612x612.jpg" style="width: 50px; height: 50px; border-radius: 50%;"
+                onmouseover="displayName()"><br>
+            <a href="index.html"><button>Log Out</button></a>
+
         </div>
     </header>
 
@@ -93,52 +96,61 @@
             <div class="outerBody">
 
 
-                <div class="innerBody">
-                    <h3 style="color: white" ;><b>About</b></h3><br>
-                    <div class="container">
-                        <div class="row">
-                            <p><b>GoChange the leading Money Changer Globally</b><br><br>
-                                At GoChange we offer better rates than average due to our sophisticated network of
-                                foreign currency exchange.
-                                Offering you only the best of rates.<br><br>
-                            </p>
-                        </div>
-                    </div>
 
-                </div><br><br>
+                <h3 style="color: white;"> </h3>
                 <div class="innerBody">
-                    <h3 style="color: white" ;><b>Features</b></h3><br>
+                    <h3 style="color: white" ;><b>Foreign Money Exchange</b></h3>
+                    <p>
+                        please select currency type
+                    </p>
                     <div class="container">
+
                         <div class="row">
                             <div class="col">
-                                <p><b>Local Exchange</b></p>
-                                <a href="iLocal.html"><img src="photo_6251164834943054733_x.jpg"> </a>
 
-                                <p>Description</p>
-                                <p> Try out how much you'll recieve when you exchange money with us. <br><br>
-                                    Simply enter the to and from for the currency type and we will return the amount
-                                    you'll recieve.
-                                </p><br>
-                                <a href="iLocal.html"> <button class="try-button">Try now!</button></a><br>
+                                <p><label for="type">Currency type:</label></p>
+                                <select id="pType" required>
+
+
+                                    <option value="USD">USD</option>
+                                    <option value="Euro">Euro</option>
+                                    <option value="Pound">Pound</option>
+
+                                </select>
+
+                                <p>Amount to exchange:</p>
+                                <input type="number" id="amount" placeholder="Enter amount." />
+
                             </div>
+
                             <div class="col">
-                                <p><b> Overseas Exchange</b></p>
-                                <a href="iOverSea.html"><img src="istockphoto-1264398315-612x612.jpg"></a>
 
-                                <p> Description</p>
-                                <p> We understand some of our customer base are working overseas and would like to use
-                                    our exchange.<br><br>
-                                    Simply enter the to and from for the currency type and we will return the amount
-                                    you'll recieve.
-                                </p>
-                                <a href="iOverSea.html"> <button class="try-button">Try
-                                        now!</button></a><br><br><br><br>
+                                <p><label for="type">Choose exchanged currency type:</label></p>
+
+                                <select id="type" required>
+                                    <option value="USD">USD</option>
+                                    <option value="Euro">Euro</option>
+                                    <option value="Pound">Pound</option>
+                                    <option value="SGD">SGD</option>
+                                </select>
+
+
+                                <p>Amount you will recieve:</p>
+                                <input type="text" id="output" disabled />
+                                <br><br><button onclick="getOSExchange()">Click here to Calculate</button><br>
+                                <a href="payment.html"><button style="margin-left: 95px;">Payment</button></a>
+
+
+                                <script src="math2.js"></script>
+                                <br><br>
                             </div>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
 
     </body>
 </body>

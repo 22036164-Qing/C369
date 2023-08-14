@@ -1,6 +1,11 @@
+
+
 function getExchange() {
     const amount = document.getElementById("amount").value;
     const type = document.getElementById("type").value;
+    const pType = document.getElementById("pType").value;
+    localStorage.setItem("amount", amount);
+    localStorage.setItem("pType", pType);
     let exchange;
     switch (type) {
         case "USD":
@@ -16,13 +21,18 @@ function getExchange() {
             exchange = 0;
     }
     const roundedExchange = exchange.toFixed(2);
+    
     document.getElementById("output").value = roundedExchange;
+    
 }
+
 
 function getOSExchange() {
     const amount = document.getElementById("amount").value;
     const type = document.getElementById("type").value;
     const pType = document.getElementById("pType").value;
+    localStorage.setItem("amount", amount);
+    localStorage.setItem("pType", pType);
     let exchange;
     if (amount <= 0) {
         alert("Please enter a valid amount.");
@@ -34,8 +44,12 @@ function getOSExchange() {
     }
     exchange = amount * getRate(pType, type);
     const roundedExchange = exchange.toFixed(2);
+    
     document.getElementById("output").value = roundedExchange;
+    
 }
+
+
 
 function getRate(pType, type) {
     const rate = {
@@ -94,3 +108,6 @@ function getRate(pType, type) {
     return exchangeRate;
 }
 
+function display(){
+    alert(amount);
+}

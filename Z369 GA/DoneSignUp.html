@@ -1,0 +1,204 @@
+<html>
+
+<head>
+    <title>About</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap CSS Link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        header {
+            background-color: white;
+            background-size: cover;
+            background-position: center;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+
+
+        .logo {
+            width: 120px;
+            height: 120px;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .brand {
+            font-size: 50px;
+            font-weight: bold;
+            color: black;
+            margin-left: 10px;
+        }
+
+        .footerInfo {
+            font-size: 15px;
+            color: black;
+        }
+
+
+        img {
+            width: 33.3%;
+        }
+
+        p {
+            color: white;
+        }
+
+        body {
+            background-image: url("Screenshot 2023-08-05 185705.png");
+            background-repeat: no-repeat;
+
+            background-size: auto;
+            background-position: top;
+        }
+
+
+
+        footer {
+            background-color: white;
+
+            background-size: cover;
+
+            padding: 30px;
+            display: flex;
+
+            justify-content: center;
+            font-family: 'Times New Roman';
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img style="width: 100px" ; src="photo_6251164834943054739_x.jpg" alt="Logo brand" height="80"
+                width="100" />
+        </div>
+        <h1 class="brand">GoChange</h1>
+        <div class="nev-links">
+            <a href="DoneSignUp.html"> <button class="signup-button">Sign Up</button></a>
+            <a href="DoneLogin.html"> <button class="login-button">Login</button></a>
+        </div>
+    </header>
+
+    <body>
+        <div class="jumbotron text-center">
+            <div class="outerBody">
+
+                <div class="innerBody">
+                    <h3 style="color: white" ;><b>Sign Up</b></h3><br><br>
+
+
+                    <div class="container">
+
+                        <div class="row">
+                            <div class="col">
+                                <h4 style="color: white" ;>Sign Up Now <br> Free of Charge</h4>
+                            </div>
+
+                            <div class="col">
+                                <p>First Name*:
+                                    <input type="text" id="FName" required />
+                                    <span id="FNameError" class="error"></span>
+                                    <br>
+
+                                    Last Name*:
+                                    <input type="text" id="LName" required />
+                                    <span id="LNameError" class="error"></span>
+                                    <br>
+
+                                    Email Info* :
+                                    <input type="text" id="Email" required />
+                                    <span id="EmailError" class="error"></span>
+                                    <br>
+
+                                    Password * :
+                                    <input type="password" id="Password" required />
+                                    <span id="PasswordError" class="error"></span>
+                                    <br>
+                                    <button onclick="validateForm()">Submit</button><br><br>
+                                </p>
+                            </div>
+
+                            <script>
+
+                                // The function to validate the form
+                                function validateForm() {
+
+                                    // Get the values of the form fields
+                                    var FName = document.getElementById("FName").value;
+                                    var LName = document.getElementById("LName").value;
+                                    var Email = document.getElementById("Email").value;
+                                    var Password = document.getElementById("Password").value;
+
+                                    // Validate the first name
+                                    if (FName == "") {
+                                        alert("* First name is required");
+                                        return false;
+                                    }
+
+                                    // Validate the last name
+                                    if (LName == "") {
+                                        alert("* Last name is required");
+                                        return false;
+                                    }
+
+                                    // Validate the email address
+                                    var regEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                                    if (!regEmail.test(Email)) {
+                                        alert("* Please enter a valid email address");
+                                        return false;
+                                    }
+
+                                    // Validate the password
+                                    if (Password == "") {
+                                        alert("* Password is required");
+                                        return false;
+                                    } else {
+                                        alert("Successful Sign Up");
+                                        localStorage.setItem("FName", FName);
+                                        localStorage.setItem("LName", LName);
+                                        localStorage.setItem("Email", Email);
+                                        localStorage.setItem("Password", Password);
+                                        return true;
+                                    }
+
+
+                                }
+
+                                // Add an event listener to the submit button
+                                document.getElementById("submit").addEventListener("click", validateForm);
+
+                            </script>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</body>
+
+
+<footer>
+    <h1 class="footerInfo">
+        <br>
+        Tel: +65 8899 0699 920 | Adam Sims Road | Availiable on App Store and Google Play
+        <br>
+        Email: Qing@thebestwebsiteever.com |@2099 by GoChange Secured by ZY ProCycle
+    </h1>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</html>
